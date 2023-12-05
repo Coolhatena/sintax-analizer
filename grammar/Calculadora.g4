@@ -3,7 +3,7 @@ grammar Calculadora;
 file: expr+;          
 
 expr: 	
-		'('expr')'                        #parentheses
+		'('expr')'                        	#parentheses
     	|
 		expr expr							#implicitMultExpr
 		|
@@ -12,7 +12,7 @@ expr:
         |
         expr operation=(PLUS|MINUS) expr    #plusSubtraction
         |
-        NUMBER              #number
+        NUMBER              				#number
         ;
 
 PLUS    :   '+';
