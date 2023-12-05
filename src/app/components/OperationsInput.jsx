@@ -32,8 +32,11 @@ const OperationsInput = () => {
 	return (
 		<div className='operations-input'>
 			<p className='operations-input-title'>Ingresa tus operaciones aritméticas y haz click en el botón para ver el resultado en consola</p>
-			<p className='operations-input-instruction'>Puedes ingresar comentarios de linea "//" o de bloque "/**/"</p>
-			<p className='operations-input-instruction'>Puedes utilizar parentesis para separar la jerarquia de tus operaciones</p>
+			<p className='operations-input-instruction'>INSTRUCCIONES:</p>
+			<p className='operations-input-instruction'>1. Puedes ingresar comentarios de linea "//" o de bloque "/**/"</p>
+			<p className='operations-input-instruction'>2. Puedes utilizar parentesis para separar la jerarquia de tus operaciones</p>
+			<p className='operations-input-instruction'>3. Solo se pueden ingresar numeros enteros</p>
+			<p className='operations-input-instruction'>4. No se deben ingresar letras</p>
 			<textarea
 				id="operation-textarea"
 				className='operations-input-textarea'
