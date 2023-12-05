@@ -29,9 +29,14 @@ const OperationsInput = () => {
 		setResults(formattedResults);
 	};
 
+	let clean = () => {
+		setInputText('');
+		setResults([]);
+	}
+
 	return (
 		<div className='operations-input'>
-			<p className='operations-input-title'>Ingresa tus operaciones aritméticas y haz click en el botón para ver el resultado en consola</p>
+			<p className='operations-input-title'>Ingresa tus operaciones aritméticas y haz click en el botón "Resolver" para ver los resultado</p>
 			<p className='operations-input-instruction'>INSTRUCCIONES:</p>
 			<p className='operations-input-instruction'>1. Puedes ingresar comentarios de linea "//" o de bloque "/**/"</p>
 			<p className='operations-input-instruction'>2. Puedes utilizar parentesis para separar la jerarquia de tus operaciones</p>
@@ -42,10 +47,16 @@ const OperationsInput = () => {
 				className='operations-input-textarea'
 				value={inputText}
 				onChange={onTextareaChange}
+				placeholder='Ingrese sus operaciones'
 			></textarea>
-			<button id="resolve" onClick={handleResolveClick} className='operations-input-button'>
-				Resolver
-			</button>
+			<div className='button-container'>
+				<button id="resolve" onClick={handleResolveClick} className='operations-input-button'>
+					Resolver
+				</button>
+				<button id="resolve" onClick={clean} className='operations-input-button'>
+					Limpiar
+				</button>
+			</div>
 			{
 				results.length !== 0 ? 
 					<>
