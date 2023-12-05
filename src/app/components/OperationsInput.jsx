@@ -17,10 +17,12 @@ const OperationsInput = () => {
 		let textWithNoComments = automata(inputText);
 		let operations = textWithNoComments.split('\n').filter((str) => str !== '')
 		let formattedResults =[]
+		let operationNum = 0
 		operations.map(operation => {
 			let result = analizer(operation);
-			result.map((element, i) => {
-				formattedResults.push(`Resultado ${i+1}: ${element}`)
+			result.map((element) => {
+				formattedResults.push(`Resultado de ${operations[operationNum]}: ${element}`);
+				operationNum++;
 			})
 
 		})
