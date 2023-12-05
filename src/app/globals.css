@@ -3,25 +3,69 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+	--background: #202020
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.header {
+	display: flex;
+	background-color: var(--background);
+	color: white;
+	padding: 1.5rem;
+	justify-content: center;
+	align-items: center;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.header h1 {
+	font-size: 1.5rem;
+}
+
+.operations-input {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.operations-input-title {
+	font-size: 1.2rem;
+}
+
+.operations-input-textarea {
+	border: 2px solid var(--background);	
+	min-width: 20rem;
+	min-height: 5rem;
+}
+
+.operations-input-button {
+	padding: 0.2rem 0.5rem;
+	margin: 0.5rem;
+	background-color: var(--background);
+	color: white;
+	border-radius: 5%;
+}
+
+.operations-input-result-title {
+	font-size: 1.5rem;
+	margin-top: 0.5rem;
+	/* padding: 0.2rem 0.5rem;
+	background-color: var(--background);
+	color: white; */
+}
+
+.operations-input-result-title {
+	font-size: 1.2rem;
+	margin: 0.5rem 0rem;
+	/* padding: 0.2rem 0.5rem;
+	background-color: var(--background);
+	color: white; */
+}
+
+.operations-input-result-container {
+	width: fit-content;
+}
+
+.operations-input-result {
+	text-align: center;
+	padding: 0.2rem 0.5rem;
+	font-size: 1.1rem;
 }
