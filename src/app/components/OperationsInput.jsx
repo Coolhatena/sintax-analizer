@@ -44,7 +44,7 @@ const OperationsInput = () => {
 				Resolver
 			</button>
 			{
-				results ? 
+				results.length !== 0 ? 
 					<>
 						<h2 className='operations-input-result-title'>Resultados:</h2>
 						<div className='operations-input-result-container'>
