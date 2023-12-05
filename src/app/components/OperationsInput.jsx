@@ -19,7 +19,6 @@ const OperationsInput = () => {
 		let formattedResults =[]
 		operations.map(operation => {
 			let result = analizer(operation);
-			console.log(result)
 			result.map((element, i) => {
 				formattedResults.push(`Resultado ${i+1}: ${element}`)
 			})
