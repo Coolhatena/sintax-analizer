@@ -22,7 +22,12 @@ const automata = (text) => {
 				caracter = 0;
 				newText += actualChar;
 			} else if (actualChar == "/"){
-				caracter = 2;
+				if(!(["/", "*"].includes(text[i+1]))){
+					caracter = 0;
+					newText += actualChar;
+				} else {
+					caracter = 2;
+				}
 			} else {
 				caracter = 5
 			}
