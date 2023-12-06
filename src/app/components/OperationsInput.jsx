@@ -82,6 +82,7 @@ const OperationsInput = () => {
 	let clean = () => {
 		setInputText('');
 		setResults([]);
+		setErrors([]);
 	}
 
 	return (
